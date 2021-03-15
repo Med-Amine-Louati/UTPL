@@ -1,0 +1,68 @@
+<div>
+<nav>
+  <img src="../../assets/Fichier 1aa.png" alt="Paris" width="120" height="50" />
+
+  <label for="drop" class="toggle">Menu</label>
+  <input type="checkbox" id="drop" />
+  <ul class="menu">
+    <li><a href="#">Accueil</a></li>
+
+    <li>
+      <label for="drop-1" class="toggle">A propos +</label>
+      <a href="#">A propos</a>
+      <input type="checkbox" id="drop-1" />
+      <ul>
+        <li><a href="#">Mission</a></li>
+        <li><a href="#">mentions légales</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Bureau</a></li>
+    <li>
+      <label for="drop-2" class="toggle">actualités</label>
+      <a href="#">actualités</a>
+      <input type="checkbox" id="drop-2" />
+      <ul>
+        <li><a href="#">Actions</a></li>
+        <li><a href="#">Evenments</a></li>
+        <!-- <li>
+
+
+              <label for="drop-3" class="toggle">Tutorials +</label>
+              <a href="#">Tutorials</a>
+              <input type="checkbox" id="drop-3"/>
+
+              <ul>
+                  <li><a href="#">HTML/CSS</a></li>
+                  <li><a href="#">jQuery</a></li>
+                  <li><a href="#">Other</a></li>
+              </ul>
+              </li> -->
+      </ul>
+    </li>
+
+    <!-- <li><a href="#">Inspiration</a></li> -->
+    <li><a href="#">Contact</a></li>
+    <!-- <li><a href="#">About</a></li> -->
+  </ul>
+</nav>
+</div>
+
+<div class="aty">
+  <span class="text">الأخبار</span>
+  <marquee
+    behavior=""
+    direction="right"
+    onmouseover="this.stop();"
+    onmouseout="this.start()"
+  >
+    <div class="box" *ngFor="let new of news">
+      <a href="#">  {{ new.title }} : {{ new.description }}</a>
+    </div>
+
+  </marquee>
+</div>
+  <div class="static" >
+    <img src="../../assets/img/land.jpg" width="100%" height="100%">
+    </div>
+<!-- ************************************************************* -->
+
