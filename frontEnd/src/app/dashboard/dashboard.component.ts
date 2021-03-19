@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {UserService } from '../services/user.service';
-import { HttpClient, HttpHeaders  } from '@angular/common/http';
+import { HttpClient  } from '@angular/common/http';
 
-import * as AppUtil from '../../app/common/common.utill'
+
 
 @Component({
   selector: 'app-dashboard',
@@ -11,9 +11,18 @@ import * as AppUtil from '../../app/common/common.utill'
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  doyenne = [
+    {name: 'Avocat'},
+    {name: 'Doctor'},
+    {name: 'juge'},
+
+  ];
  title : string;
  description : string;
+ doyensSelected :string;
  owner : string;
+ link: string;
   constructor(
     private userService: UserService,
     private router: Router,
@@ -21,18 +30,27 @@ export class DashboardComponent implements OnInit {
 
   ) { }
 
-  ngOnInit(): void {
+ngOnInit(): void {
 const user = this.userService.getCurrentUser()
+if(!user){
+  console.log(user)
+  this.router.navigate (['/login'])
+}else{
   this.owner = user.id;
   console.log(this.owner)
+}
+
   }
+
   AddNews(){
     const news = {
+      doyen : this.doyensSelected,
       title : this.title,
       description : this.description,
-      owner : this.owner
+      owner : this.owner,
+      link:this.link
     }
-
+      console.log(news)
 
     this.http.post<any>('news/add',news).subscribe(
       res=>{

@@ -8,7 +8,9 @@ router.post('/add',(req,res,next) => {
   const news = new News({
     title : req.body.title,
     description : req.body.description,
+    doyenne : req.body.doyenne,
     owner : req.body.owner,
+    link:req.body.link,
   });
   console.log(news)
   news.save((err,news)=>{

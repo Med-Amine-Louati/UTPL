@@ -1,22 +1,653 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <!-- <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button> -->
-    <h1>SimpleCRM</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/accounts'"> Accounts </a>
-      <a mat-button [routerLink]="'/create-account'"> Create Account </a>
-      <a mat-button [routerLink]="'/contacts'"> Contacts </a>
-      <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
-      <a mat-button [routerLink]="'/activities'"> Activities </a>
-      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+<div id="header">
+  <div class="container">
+    <div id="logo" class="pull-left">
+      <a href="#hero"><img src="img/logo.png" alt="" title="" /></a>
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!--<h1><a href="#hero">Regna</a></h1>-->
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active"><a href="#">Accueil</a></li>
+        <li>
+          <a href="#about">Apropos</a>
+          <ul>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Mentios légales</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Bureau</a></li>
+        <li class="menu-has-children">
+          <a href="">Actualité</a>
+          <ul>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Evenment</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <!-- #nav-menu-container -->
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12" >
+        <div
+          class="d-flex justify-content-between align-items-center breaking-news bg-white"
+
+        >
+          <div
+            class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news"
+
+          >
+            <span class="d-flex align-items-center">&nbsp;الأخبار</span>
+          </div>
+          <marquee
+            class="news-scroll"
+            behavior="scroll"
+            direction="right"
+            onmouseover="this.stop();"
+            onmouseout="this.start();"
+
+          >
+          <div class="newsadd" >
+            <a href="{{news[0].link}}"
+              >{{news[0].title}}
+            </a>
+            <span class="dot"></span>
+            <!-- <a href="#"
+              >Duis aute irure dolor in reprehenderit in voluptate velit esse
+            </a>
+            <span class="dot"></span>
+            <a href="#"
+              >Duis aute irure dolor in reprehenderit in voluptate velit esse
+            </a> -->
+            </div>
+          </marquee>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #header -->
+
+<!--==========================
+  Hero Section
+============================-->
+<section id="hero">
+  <div class="hero-container">
+    <h1>Bienvenu sur le site de UTPL</h1>
+    <h2>We are team</h2>
+    <a href="#about" class="btn-get-started">Get Started</a>
+  </div>
+</section>
+<!-- #hero -->
+
+<!--==========================
+    About Us Section
+  ============================-->
+<section id="about">
+  <div class="container">
+    <div class="row about-container">
+      <div class="col-lg-6 content order-lg-1 order-2">
+        <h2 class="title">A propos de nous</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+
+        <div class="icon-box wow fadeInUp">
+          <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+          <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+          <p class="description">
+            Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+            tempore, cum soluta nobis est eligendi
+          </p>
+        </div>
+
+        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+          <div class="icon"><i class="fa fa-photo"></i></div>
+          <h4 class="title"><a href="">Magni Dolores</a></h4>
+          <p class="description">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+
+        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+          <div class="icon"><i class="fa fa-bar-chart"></i></div>
+          <h4 class="title"><a href="">Dolor Sitema</a></h4>
+          <p class="description">
+            Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat tarad limino ata
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+    </div>
+  </div>
+</section>
+<!-- #about -->
+<!-- Portfolio Section
+  ============================-->
+<!--==========================
+
+    Team Section
+  ============================-->
+<section id="team">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Bureau</h3>
+      <p class="section-description">
+        Partez à la rencontre des membres du UTPL
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-1.jpg" alt="" />
+          </div>
+          <h4>Khaled Laouti</h4>
+          <span>Chief Executive Officer</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-2.jpg" alt="" />
+          </div>
+          <h4>Amine Zaghdoudi</h4>
+          <span>Product Manager</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-3.jpg" alt="" />
+          </div>
+          <h4>Mohamed Larbi Jlassi</h4>
+          <span>CTO</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-4.jpg" alt="" />
+          </div>
+          <h4>Lamia Masmoudi</h4>
+          <span>Accountant</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #team -->
+
+<!--==========================
+    Contact Section
+  ============================-->
+<section id="portfolio">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Evenment</h3>
+      <p class="section-description">Event Description</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul id="portfolio-flters">
+          <li
+            data-filter=".filter-app, .filter-card, .filter-logo, .filter-web"
+            class="filter-active"
+          >
+            All
+          </li>
+          <li data-filter=".filter-app">Ingenieur</li>
+          <li data-filter=".filter-card">Medecin</li>
+          <li data-filter=".filter-logo">Avocat</li>
+          <li data-filter=".filter-web">Juge</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" id="portfolio-wrapper">
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>App 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>Web 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>App 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>Card 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <a href="">
+          <img src="../../assets/event/photo-compressée-08.png" alt="" />
+          <div class="details">
+            <h4>Card 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <a href="">
+          <img src="../../assets/event/Untitled-01-600x600.png" alt="" />
+          <div class="details">
+            <h4>Web 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <a href="">
+          <img src="../../assets/event/Untitled-04-600x600.png" alt="" />
+          <div class="details">
+            <h4>Card 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <a href="">
+          <img src="../../assets/event/Untitled-03-600x600.png" alt="" />
+          <div class="details">
+            <h4>App 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <a href="">
+          <img src="../../assets/event/Untitled-05.png" alt="" />
+          <div class="details">
+            <h4>Logo 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <a href="">
+          <img src="../../assets/event/Untitled-1-03.png" alt="" />
+          <div class="details">
+            <h4>Logo 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <a href="">
+          <img src="../../assets/event/Untitled-2-13.png" alt="" />
+          <div class="details">
+            <h4>Web 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <a href="">
+          <img src="../../assets/event/Untitled-1-05.png" alt="" />
+          <div class="details">
+            <h4>Logo 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #portfolio -->
+
+<!--==========================
+ ==========================
+    Facts Section
+  ============================-->
+<!-- <section id="facts">
+    <div class="container wow fadeIn">
+      <div class="section-header">
+        <h3 class="section-title">Facts</h3>
+        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+      </div>
+      <div class="row counters">
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">232</span>
+          <p>Clients</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">521</span>
+          <p>Projects</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">1,463</span>
+          <p>Hours Of Support</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">15</span>
+          <p>Hard Workers</p>
+        </div>
+
+      </div>
 
     </div>
-  </mat-toolbar-row>
+  </section>#facts -->
 
-  <mat-toolbar-row>
-      <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<!--==========================
+    Services Section
+  ============================-->
+<section id="services">
+  <div class="container wow fadeIn">
+    <div class="section-header">
+      <h3 class="section-title">Services</h3>
+      <p class="section-description">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-desktop"></i></a>
+          </div>
+          <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">
+            Voluptatum deleniti atque corrupti quos dolores et quas molestias
+            excepturi sint occaecati cupiditate non provident
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-bar-chart"></i></a>
+          </div>
+          <h4 class="title"><a href="">Dolor Sitema</a></h4>
+          <p class="description">
+            Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat tarad limino ata
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-paper-plane"></i></a>
+          </div>
+          <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+          <p class="description">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-photo"></i></a>
+          </div>
+          <h4 class="title"><a href="">Magni Dolores</a></h4>
+          <p class="description">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-road"></i></a>
+          </div>
+          <h4 class="title"><a href="">Nemo Enim</a></h4>
+          <p class="description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-shopping-bag"></i></a>
+          </div>
+          <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+          <p class="description">
+            Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+            tempore, cum soluta nobis est eligendi
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #services -->
+
+<!--==========================
+  Call To Action Section
+  ============================-->
+<section id="call-to-action">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-lg-9 text-center text-lg-left">
+        <h3 class="cta-title">Call To Action</h3>
+        <p class="cta-text">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle" href="#">Call To Action</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #call-to-action -->
+
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Contact</h3>
+      <p class="section-description">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque
+      </p>
+    </div>
+  </div>
+
+  <div
+    id="google-map"
+    data-latitude="40.713732"
+    data-longitude="-74.0092704"
+  ></div>
+
+  <div class="container wow fadeInUp">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-4">
+        <div class="info">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>A108 Adam Street<br />New York, NY 535022</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p>info@example.com</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1 5589 55488 55s</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-8">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                data-rule="email"
+                data-msg="Please enter a valid email"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                data-rule="minlen:4"
+                data-msg="Please enter at least 8 chars of subject"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                name="message"
+                rows="5"
+                data-rule="required"
+                data-msg="Please write something for us"
+                placeholder="Message"
+              ></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #contact -->
+
+<!--==========================
+  Footer
+============================-->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container"></div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+      Bootstrap Templates by
+      <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
