@@ -1,68 +1,678 @@
-<div>
-<nav>
-  <img src="../../assets/Fichier 1aa.png" alt="Paris" width="120" height="50" />
 
-  <label for="drop" class="toggle">Menu</label>
-  <input type="checkbox" id="drop" />
-  <ul class="menu">
-    <li><a href="#">Accueil</a></li>
+<!-- #header -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light" color ="red">
+  <a class="navbar-brand" href="#">
+    <img src="../../assets/logo.png"  class="d-inline-block align-top" alt="" id="nav-img">
 
-    <li>
-      <label for="drop-1" class="toggle">A propos +</label>
-      <a href="#">A propos</a>
-      <input type="checkbox" id="drop-1" />
-      <ul>
-        <li><a href="#">Mission</a></li>
-        <li><a href="#">mentions légales</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Bureau</a></li>
-    <li>
-      <label for="drop-2" class="toggle">actualités</label>
-      <a href="#">actualités</a>
-      <input type="checkbox" id="drop-2" />
-      <ul>
-        <li><a href="#">Actions</a></li>
-        <li><a href="#">Evenments</a></li>
-        <!-- <li>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Apropos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Mission</a>
+          <a class="dropdown-item" href="#">Mention Légales</a>
+          <div class="dropdown-divider"></div>
+                </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Bureau <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Actualité
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Evenment</a>
+          <div class="dropdown-divider"></div>
 
-              <label for="drop-3" class="toggle">Tutorials +</label>
-              <a href="#">Tutorials</a>
-              <input type="checkbox" id="drop-3"/>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Partenaire <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact Us <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
 
-              <ul>
-                  <li><a href="#">HTML/CSS</a></li>
-                  <li><a href="#">jQuery</a></li>
-                  <li><a href="#">Other</a></li>
-              </ul>
-              </li> -->
-      </ul>
-    </li>
+  </div>
 
-    <!-- <li><a href="#">Inspiration</a></li> -->
-    <li><a href="#">Contact</a></li>
-    <!-- <li><a href="#">About</a></li> -->
-  </ul>
 </nav>
-</div>
 
-<div class="aty">
-  <span class="text">الأخبار</span>
-  <marquee
-    behavior=""
-    direction="right"
-    onmouseover="this.stop();"
-    onmouseout="this.start()"
-  >
-    <div class="box" *ngFor="let new of news">
-      <a href="#">  {{ new.title }} : {{ new.description }}</a>
+
+<!--==========================
+  Hero Section
+============================-->
+<section id="hero">
+  <div class="hero-container">
+    <h1>Bienvenu sur le site de UTPL</h1>
+    <h2>We are team</h2>
+    <a href="#about" class="btn-get-started">Get Started</a>
+  </div>
+</section>
+<!-- #hero -->
+
+<!--==========================
+    About Us Section
+  ============================-->
+  <section id="about">
+    <div class="container">
+      <div class="row about-container">
+
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <!-- <h2 class="title"> <h1>Notre syndicat oeuvre pour <span></span></h1></h2> -->
+          <div id="container">
+            Notre syndicat oeuvre pour
+            <div id=flip>
+              <div><div>Le development</div></div>
+              <div><div>L'innovation</div></div>
+              <div><div>La recherche</div></div>
+            </div>
+          <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+          body {
+            margin:0px;
+            font-family:'Roboto';
+            text-align:center;
+            background: #333;
+          }
+
+
+
+          #container {
+            color:#999;
+            /* text-transform: uppercase; */
+            font-size:36px;
+            font-weight:bold;
+            padding-top:200px;
+            /* position:fixed; */
+            width:100%;
+            bottom:45%;
+            /* display:block; */
+          }
+
+          #flip {
+            height:50px;
+            overflow:hidden;
+          }
+
+          #flip > div > div {
+            color:#fff;
+            padding:4px 12px;
+            height:45px;
+            margin-bottom:45px;
+            display:inline-block;
+          }
+
+          #flip div:first-child {
+            animation: show 5s linear infinite;
+          }
+
+          #flip div div {
+            background:#2B2968;
+          }
+          #flip div:first-child div {
+            background:#2B2968;
+          }
+          #flip div:last-child div {
+            background:#2B2968;
+          }
+
+          @keyframes show {
+            0% {margin-top:-270px;}
+            5% {margin-top:-180px;}
+            33% {margin-top:-180px;}
+            38% {margin-top:-90px;}
+            66% {margin-top:-90px;}
+            71% {margin-top:0px;}
+            99.99% {margin-top:0px;}
+            100% {margin-top:-270px;}
+          }
+
+          /* p {
+            position:fixed;
+            width:100%;
+            bottom:30px;
+            font-size:12px;
+            color:#999;
+            margin-top:200px;
+          } */
+
+          </style>
+          </div>
+
+
+
+
+        </div>
+
+        <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+      </div>
+
+    </div>
+  </section><!-- #about -->
+<!-- #about -->
+<!-- Portfolio Section
+  ============================-->
+<!--==========================
+    Team Section
+  ============================-->
+<section id="team">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Bureau</h3>
+      <p class="section-description">
+        Partez à la rencontre des membres du UTPL
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-1.jpg" alt="" />
+          </div>
+          <h4>Khaled Laouti</h4>
+          <span>Chief Executive Officer</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-2.jpg" alt="" />
+          </div>
+          <h4>Amine Zaghdoudi</h4>
+          <span>Product Manager</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-3.jpg" alt="" />
+          </div>
+          <h4>Mohamed Larbi Jlassi</h4>
+          <span>CTO</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="member">
+          <div class="pic">
+            <img src="../../assets/landingpage/img/team-4.jpg" alt="" />
+          </div>
+          <h4>Lamia Masmoudi</h4>
+          <span>Accountant</span>
+          <div class="social">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #team -->
+
+<!--==========================
+    Contact Section
+  ============================-->
+<section id="portfolio">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Evenment</h3>
+      <p class="section-description">Event Description</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul id="portfolio-flters">
+          <li
+            data-filter=".filter-app, .filter-card, .filter-logo, .filter-web"
+            class="filter-active"
+          >
+            All
+          </li>
+          <li data-filter=".filter-app">Ingenieur</li>
+          <li data-filter=".filter-card">Medecin</li>
+          <li data-filter=".filter-logo">Avocat</li>
+          <li data-filter=".filter-web">Juge</li>
+        </ul>
+      </div>
     </div>
 
-  </marquee>
-</div>
-  <div class="static" >
-    <img src="../../assets/img/land.jpg" width="100%" height="100%">
-    </div>
-<!-- ************************************************************* -->
+    <div class="row" id="portfolio-wrapper">
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>App 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
 
+      <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>Web 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>App 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <a href="">
+          <img src="../../assets/event/last.jpg" alt="" />
+          <div class="details">
+            <h4>Card 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <a href="">
+          <img src="../../assets/event/photo-compressée-08.png" alt="" />
+          <div class="details">
+            <h4>Card 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <a href="">
+          <img src="../../assets/event/Untitled-01-600x600.png" alt="" />
+          <div class="details">
+            <h4>Web 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <a href="">
+          <img src="../../assets/event/Untitled-04-600x600.png" alt="" />
+          <div class="details">
+            <h4>Card 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <a href="">
+          <img src="../../assets/event/Untitled-03-600x600.png" alt="" />
+          <div class="details">
+            <h4>App 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <a href="">
+          <img src="../../assets/event/Untitled-05.png" alt="" />
+          <div class="details">
+            <h4>Logo 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <a href="">
+          <img src="../../assets/event/Untitled-1-03.png" alt="" />
+          <div class="details">
+            <h4>Logo 3</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <a href="">
+          <img src="../../assets/event/Untitled-2-13.png" alt="" />
+          <div class="details">
+            <h4>Web 1</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <a href="">
+          <img src="../../assets/event/Untitled-1-05.png" alt="" />
+          <div class="details">
+            <h4>Logo 2</h4>
+            <span>Alored dono par</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #portfolio -->
+
+<!--==========================
+ ==========================
+    Facts Section
+  ============================-->
+<!-- <section id="facts">
+    <div class="container wow fadeIn">
+      <div class="section-header">
+        <h3 class="section-title">Facts</h3>
+        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+      </div>
+      <div class="row counters">
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">232</span>
+          <p>Clients</p>
+        </div>
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">521</span>
+          <p>Projects</p>
+        </div>
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">1,463</span>
+          <p>Hours Of Support</p>
+        </div>
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">15</span>
+          <p>Hard Workers</p>
+        </div>
+      </div>
+    </div>
+  </section>#facts -->
+
+<!--==========================
+    Services Section
+  ============================-->
+<section id="services">
+  <div class="container wow fadeIn">
+    <div class="section-header">
+      <h3 class="section-title">Services</h3>
+      <p class="section-description">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-desktop"></i></a>
+          </div>
+          <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">
+            Voluptatum deleniti atque corrupti quos dolores et quas molestias
+            excepturi sint occaecati cupiditate non provident
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-bar-chart"></i></a>
+          </div>
+          <h4 class="title"><a href="">Dolor Sitema</a></h4>
+          <p class="description">
+            Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat tarad limino ata
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-paper-plane"></i></a>
+          </div>
+          <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+          <p class="description">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-photo"></i></a>
+          </div>
+          <h4 class="title"><a href="">Magni Dolores</a></h4>
+          <p class="description">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-road"></i></a>
+          </div>
+          <h4 class="title"><a href="">Nemo Enim</a></h4>
+          <p class="description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="box">
+          <div class="icon">
+            <a href=""><i class="fa fa-shopping-bag"></i></a>
+          </div>
+          <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+          <p class="description">
+            Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+            tempore, cum soluta nobis est eligendi
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #services -->
+
+<!--==========================
+  Call To Action Section
+  ============================-->
+<section id="call-to-action">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-lg-9 text-center text-lg-left">
+        <h3 class="cta-title">Call To Action</h3>
+        <p class="cta-text">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle" href="#">Call To Action</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #call-to-action -->
+
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Contact</h3>
+      <p class="section-description">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque
+      </p>
+    </div>
+  </div>
+
+  <div
+    id="google-map"
+    data-latitude="40.713732"
+    data-longitude="-74.0092704"
+  ></div>
+
+  <div class="container wow fadeInUp">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-4">
+        <div class="info">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>A108 Adam Street<br />New York, NY 535022</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p>info@example.com</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1 5589 55488 55s</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-8">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                data-rule="email"
+                data-msg="Please enter a valid email"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                data-rule="minlen:4"
+                data-msg="Please enter at least 8 chars of subject"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                name="message"
+                rows="5"
+                data-rule="required"
+                data-msg="Please write something for us"
+                placeholder="Message"
+              ></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- #contact -->
+
+<!--==========================
+  Footer
+============================-->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container"></div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>TuniDesign</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+
+      <a href="">TuniDesign</a>
+    </div>
+  </div>
+</footer>
