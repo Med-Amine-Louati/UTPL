@@ -1015,3 +1015,6 @@ h1 span::before{
   50% { content: 'Le development'}
   100% { content: 'l innovation'}
 }
+.map{
+  padding-left: 250px;
+}
