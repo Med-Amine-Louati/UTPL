@@ -11,6 +11,7 @@ import {News } from '../../../../server/models/News.js'
 export class LandingPageComponent implements OnInit {
   news: News[];
 
+
   constructor(
     private http: HttpClient
   ) {}
