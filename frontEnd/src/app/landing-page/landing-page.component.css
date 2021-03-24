@@ -1053,8 +1053,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .dot {
   height: 6px;
   width: 6px;
-  margin-left: 3px;
-  margin-right: 3px;
+
+  margin-right: 5px;
   margin-top: 2px !important;
   background-color: rgb(207, 23, 23);
   border-radius: 50%;
